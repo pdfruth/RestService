@@ -31,7 +31,12 @@ public class RestServiceEndpoint {
 		restRequest = JsonbBuilder.create().fromJson(postBody, RestRequestData.class);
 		
 		/*
-		 * Now the values for those json elements are in the restRequest POJO
+		 * Now the values for those json elements are in the restRequest POJO class
+		 * Each of the elements is a String whose value can be individually accessed via;
+		 *		restRequest.source_dataset
+		 *		restRequest.target_vsam
+		 *		restRequest.start_rows
+		 *		restRequest.row_count
 		 */
 		System.out.println(restRequest.toString());
 		
