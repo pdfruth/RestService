@@ -22,7 +22,7 @@ public class RestServiceEndpoint {
 		System.out.println("PostBody=" + postBody);
 		
 		/*
-		 * The idea is to parse the following json and do jzos stuff here.
+		 * The idea is leverage JSON-B to parse the following json payload, deserializing it to a POJO class.
 		 * The expected json look like
 		 * { "source_dataset" : "HQL.DG.RAW", "target_vsam": "HQL", "start_rows": "0", "row_count": 10 }
 		 */
@@ -44,6 +44,16 @@ public class RestServiceEndpoint {
 		 * Do your jzos stuff here
 		 */
 		
-		return Response.status(Response.Status.CREATED).build();
+		
+		/*
+		 * Depending how things went return an HTTP status
+		 * The example below returns a status of CREATED (201)
+		 * Or maybe you rather return OK (200)
+		 * If things go badly return a status of INTERNAL_SERVER_ERROR (500)
+		 */
+		
+		return Response.status(Response.Status.CREATED).build(); //201
+		// return Response.status(Response.Status.OK).build(); // 200
+		// return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build(); // 500
 	}
 }
