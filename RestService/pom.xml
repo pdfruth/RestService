@@ -16,8 +16,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.sourceEncoding>UTF-8</project.report.sourceEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
-		<jakartaee-api.version>10.0.0</jakartaee-api.version>
+		<!-- <maven.compiler.release>1.8</maven.compiler.release> -->
+		<jakartaee-api.version>9.1.0</jakartaee-api.version>
 		<compiler-plugin.version>3.11.0</compiler-plugin.version>
 		<war-plugin.version>3.4.0</war-plugin.version>
 		<liberty-plugin.version>3.10.3</liberty-plugin.version>
@@ -33,7 +33,7 @@
 		<dependency>
 			<groupId>org.eclipse.microprofile</groupId>
 			<artifactId>microprofile</artifactId>
-			<version>6.1</version>
+			<version>5.0</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
@@ -81,7 +81,7 @@
 					<assemblyArtifact>
 						<groupId>io.openliberty</groupId>
 						<artifactId>openliberty-runtime</artifactId>
-						<version>[24.0.0.9,)</version>
+						<version>22.0.0.6</version>
 						<type>zip</type>
 					</assemblyArtifact>
 					<serverName>${project.artifactId}Server</serverName>
